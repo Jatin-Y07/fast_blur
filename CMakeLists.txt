@@ -1,7 +1,6 @@
 cmake_minimum_required(VERSION 3.15)
 project(fast_blur)
 
-# Auto-find pybind11 from pip installation
 execute_process(
   COMMAND python3 -c "import pybind11; print(pybind11.get_cmake_dir())"
   OUTPUT_VARIABLE pybind11_DIR
