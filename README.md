@@ -9,12 +9,11 @@ using a separable three-zone fixed-point algorithm with OpenMP multi-core parall
 |------------|-------------|---------|------------------|-----------|--------|
 | 512×512    |   11.04s    |  0.0007s|    0.0006s       |  18552.6× |  1.20× |
 | 1024x1024  |   45.250s   |  0.0057s|    0.0040s       |  11401.7x |  1.43x |
-|2048x2048   |   181.882s  |  0.0205s|    0.0108s       |  16862.2x |  1.90x |
-|4096x4096   |   728.673s  |  0.1924s|    0.0661s       |  11027.4x |  2.91x |
+| 2048x2048  |   181.882s  |  0.0205s|    0.0108s       |  16862.2x |  1.90x |
+| 4096x4096  |   728.673s  |  0.1924s|    0.0661s       |  11027.4x |  2.91x |
 
 > Measured with `python3 benchmarks/bench.py --image photo.jpg --radius 5.0`
 
-![Benchmark chart](benchmarks/speedup.png)
 
 ## How it works
 Python call → pybind11 binding → C++ separable blur
